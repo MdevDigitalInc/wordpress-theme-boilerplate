@@ -14,6 +14,8 @@ const {getIfUtils, removeEmpty} = require('webpack-config-utils')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const autoprefixer = require('autoprefixer')
 const StyleLintPlugin = require('stylelint-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const WriteFilePlugin   = require('write-file-webpack-plugin')
 
 const CURRENT_IP = require('my-local-ip')()
 const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
@@ -294,6 +296,10 @@ module.exports = {
         windows: false
       }
     }),
+
+    new CopyWebpackPlugin([
+      { from: 'php', to: __dirname + '/dist' }
+    ]),
 
     process.env.BROWSER_SYNC && ifNotProduction(
       new BrowserSyncPlugin({
