@@ -5,9 +5,8 @@
 The purpose of this Boilerplate is to deploy future ready static HTML5 websites with the power of modern web pipeline.
 Assets will be exported, optimized and minified automatically as long as you follow the project structure.
 
-#Folder Strucuter
+#Folder Structure
 ```bash
-src
 ├── app
 │   ├── index.js
 │   └── page2.js
@@ -21,6 +20,26 @@ src
 │   ├── js_index.js
 │   └── js_page2.js
 ├── page2.html
+├── php
+│   ├── 404.php
+│   ├── archive.php
+│   ├── author.php
+│   ├── category.php
+│   ├── comments.php
+│   ├── footer.php
+│   ├── functions.php
+│   ├── header.php
+│   ├── index.php
+│   ├── loop.php
+│   ├── page.php
+│   ├── pagination.php
+│   ├── searchform.php
+│   ├── search.php
+│   ├── sidebar.php
+│   ├── single.php
+│   ├── tag.php
+│   └── template-demo.php
+├── screenshot.png
 └── styles
     ├── buttons.scss
     ├── forms.scss
@@ -30,7 +49,9 @@ src
     ├── scaffolding.scss
     ├── typography.scss
     ├── utilities.scss
-    └── variables.scss
+    ├── variables.scss
+    └── wp_core.scss
+
 ```
 It is very important to respect the folter structure  and maintain files in the right place
 
@@ -59,6 +80,85 @@ the global-main.scss file.
 @moreira-development/sass-boilerplate library and therefore comes with a
 plethora of useful classes already built in. [ SASS-BOILERPLATE DOCUMENTATION
 ](https://github.com/MoreiraDevelopment/sass-boilerplate).
+
+5. /php
+... This is where you will store and add any PHP files related to Wordpress Themes.
+... Files inside of PHP folder will be copied over to the root of the /dist folder.
+
+### Output File Strucutre
+```bash
+website-root/dist
+├── 404.php
+├── archive.php
+├── author.php
+├── category.php
+├── comments.php
+├── css
+│   └── styles.css
+├── footer.php
+├── functions.php
+├── header.php
+├── icons
+│   ├── android-chrome-144x144.png
+│   ├── android-chrome-192x192.png
+│   ├── android-chrome-256x256.png
+│   ├── android-chrome-36x36.png
+│   ├── android-chrome-384x384.png
+│   ├── android-chrome-48x48.png
+│   ├── android-chrome-512x512.png
+│   ├── android-chrome-72x72.png
+│   ├── android-chrome-96x96.png
+│   ├── apple-touch-icon-114x114.png
+│   ├── apple-touch-icon-120x120.png
+│   ├── apple-touch-icon-144x144.png
+│   ├── apple-touch-icon-152x152.png
+│   ├── apple-touch-icon-167x167.png
+│   ├── apple-touch-icon-180x180.png
+│   ├── apple-touch-icon-57x57.png
+│   ├── apple-touch-icon-60x60.png
+│   ├── apple-touch-icon-72x72.png
+│   ├── apple-touch-icon-76x76.png
+│   ├── apple-touch-icon.png
+│   ├── apple-touch-icon-precomposed.png
+│   ├── apple-touch-startup-image-1182x2208.png
+│   ├── apple-touch-startup-image-1242x2148.png
+│   ├── apple-touch-startup-image-1496x2048.png
+│   ├── apple-touch-startup-image-1536x2008.png
+│   ├── apple-touch-startup-image-320x460.png
+│   ├── apple-touch-startup-image-640x1096.png
+│   ├── apple-touch-startup-image-640x920.png
+│   ├── apple-touch-startup-image-748x1024.png
+│   ├── apple-touch-startup-image-750x1294.png
+│   ├── apple-touch-startup-image-768x1004.png
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
+│   ├── favicon.ico
+│   ├── firefox_app_128x128.png
+│   ├── firefox_app_512x512.png
+│   ├── firefox_app_60x60.png
+│   ├── manifest.json
+│   └── manifest.webapp
+├── img
+│   ├── favicon.png
+│   ├── MoreiraDevelopment.svg
+│   ├── SpaceOne.jpg
+│   └── SpaceTwo.jpg
+├── index.html
+├── index.php
+├── js
+│   ├── bundle-index.js
+│   └── bundle-page2.js
+├── loop.php
+├── page2.html
+├── page.php
+├── pagination.php
+├── searchform.php
+├── search.php
+├── sidebar.php
+├── single.php
+├── tag.php
+└── template-demo.php
+```
 
 
 

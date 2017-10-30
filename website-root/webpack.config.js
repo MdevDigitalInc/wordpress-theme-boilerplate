@@ -296,7 +296,12 @@ module.exports = {
         windows: false
       }
     }),
-
+    // [ PHP OUTPUT ] ----------------
+    // Webpack is using the Copy Webpack Plugin
+    // to essentially copy raw PHP files from the
+    // php folder. That means that Webpack is not able to
+    // inject any Style / Script tags so those must be added
+    // manually according to the /dist output folder.
     new CopyWebpackPlugin([
       { from: 'php', to: __dirname + '/dist' }
     ]),
