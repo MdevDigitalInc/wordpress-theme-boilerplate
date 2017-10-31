@@ -22,6 +22,13 @@ const externalPath = `http://${CURRENT_IP}:${process.env.WEBPACK_SERVER_PORT}/`
 const {ifProduction, ifNotProduction, ifDevelopment} = getIfUtils(process.env.NODE_ENV)
 const rootNodeModulesPath = resolve(__dirname, 'node_modules')
 
+// [ THEME NAME ] ---------------------/
+// Determines the name of the output folder
+// that webpack will create to adhere to
+// wordpress documentation.
+const THEME_NAME        = 'mdev-theme'
+exports.THEME_NAME      = THEME_NAME
+
 // Generate Style Loader Order
 const generateStyleLoaders = (...loaders) => (
   loaders.map(loader => (
@@ -43,7 +50,7 @@ const generateHtml = (bundleName,templateName) => (
       chunksSortMode: 'dependency',
       inject: true,
       chunks: [bundleName],
-      template: './'+templateName,
+      template: './' + templateName,
       filename: templateName,
       minify: ifProduction({
         removeComments: true,
@@ -100,7 +107,8 @@ module.exports = {
     publicPath: '/',
     filename: 'js/bundle-[name].js',
     chunkFilename: 'js/chunk.[name].js',
-    path: resolve(__dirname, 'dist'),
+    // Output path points to theme name
+    path: resolve(__dirname, THEME_NAME),
     pathinfo: ifNotProduction()
   },
   // [ MODULES ] ---------------------/
@@ -303,7 +311,8 @@ module.exports = {
     // inject any Style / Script tags so those must be added
     // manually according to the /dist output folder.
     new CopyWebpackPlugin([
-      { from: 'php', to: __dirname + '/dist' }
+      { from: 'php', to: __dirname + '/' + THEME_NAME },
+      { from: 'themeinfo', to: __dirname + '/' + THEME_NAME }
     ]),
 
     process.env.BROWSER_SYNC && ifNotProduction(
