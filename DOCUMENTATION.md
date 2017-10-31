@@ -5,7 +5,7 @@
 The purpose of this Boilerplate is to deploy future ready static HTML5 websites with the power of modern web pipeline.
 Assets will be exported, optimized and minified automatically as long as you follow the project structure.
 
-#Folder Structure
+#  Input Folder Structure
 ```bash
 ├── app
 │   ├── index.js
@@ -85,9 +85,15 @@ plethora of useful classes already built in. [ SASS-BOILERPLATE DOCUMENTATION
 ... This is where you will store and add any PHP files related to Wordpress Themes.
 ... Files inside of PHP folder will be copied over to the root of the /dist folder.
 
+6. /themeinfo
+... The purpose of this folder is to house the style.css file required by
+wordpress to make themes work in the backend.
+... Don't forget to change any pertinent information in the style.css prior to
+shipping the finished product.
+
 ### Output File Strucutre
 ```bash
-website-root/dist
+mdev-theme
 ├── 404.php
 ├── archive.php
 ├── author.php
@@ -156,6 +162,7 @@ website-root/dist
 ├── search.php
 ├── sidebar.php
 ├── single.php
+├── style.css
 ├── tag.php
 └── template-demo.php
 ```
@@ -171,13 +178,27 @@ web.
 Because of this it is important that you take note of a couple of configuration
 items so you can add more pages when necessary.
 
-1. Entry Configuration
+1. Theme Name Configuration
+... The theme name given to the theme output folder is setup through Webpack.
+... At the very start of the file, after all the imports you will see a constant called THEME_NAME,
+whatever you set this variable to is what the output folder will be called.
+
+```javascript
+// [ THEME NAME ] ---------------------/
+// Determines the name of the output folder
+// that webpack will create to adhere to
+// wordpress documentation.
+const THEME_NAME        = 'mdev-theme'
+exports.THEME_NAME      = THEME_NAME
+```
+
+2. Entry Configuration
 ... The "entry" configuration in Webpack is responsible for telling webpack how
 many files it needs to deal with and how they are to be split.
 ... For our purposes you must remember to add new entrys if you want new
 templates to also be compiled.
 
-```js
+```javascript
   // [ ENTRY ] -----------------------/
   // Entry indicates to webpack how many
   // webpages and JS files it needs to output.
@@ -191,14 +212,14 @@ templates to also be compiled.
   },
 ```
 
-2. Output
+3. Output
 ... All of the files imported or required through the entry file will be bundled
 into a CSS bundle and a JS bundle. In our case we have it configured so CSS is
 bundled into a single package and JS is split into individual files per page.
 ... This allows us some flexibility with Javascript and loading less assets per
 page.
 
-```js
+```javascript
   // [ OUTPUT ] ----------------------/
   // Configuration for how Webpack is going
   // to output the files for the server.
@@ -213,7 +234,7 @@ page.
   },
 ```
 
-3. Generate HTML Output
+4. Generate HTML Output
 ... Webpack was designed to run with Applications, but it can be taught to work
 with HTML and static sites. It just takes some clever planning. In our case, we
 are using different entry points per page.
@@ -222,7 +243,7 @@ is a generator that will tell Webpack to extrat the HTML using
 html-webpack-plugin for each entry point corresponding to the appropriate
 template.
 
-```
+```javascript
   // [ HTML OUTPUT ] ---------------
   // To get webpack to output HTML
   // you must tell it which template to use and
