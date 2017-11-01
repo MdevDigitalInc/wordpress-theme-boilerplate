@@ -24,7 +24,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- [ Stylesheet ] -->
     <link href="/css/styles.css" rel="stylesheet">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
     <!-- [ ICONS ] -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -86,7 +85,7 @@
 
 					<!-- nav -->
 					<nav class="mdev-main-nav" role="navigation">
-						<?php html5blank_nav(); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'main-nav' ) ); ?>
 					</nav>
 					<!-- /nav -->
 
