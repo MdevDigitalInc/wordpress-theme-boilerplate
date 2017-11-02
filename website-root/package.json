@@ -4,7 +4,7 @@
   "description": "HTM5 boilerplate with webpack and sass support for Moreira Development Internal projects",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
-    "postbuild": "http-server dist",
+    "postbuild": "http-server mdev-theme",
     "build:watch": "cross-env NODE_ENV=development webpack-dev-server",
     "dev": "npm run build:watch",
     "dev:inspect": "cross-env NODE_ENV=development node --inspect node_modules/.bin/webpack-dev-server",

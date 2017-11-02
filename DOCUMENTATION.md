@@ -5,6 +5,28 @@
 The purpose of this Boilerplate is to deploy future ready static HTML5 websites with the power of modern web pipeline.
 Assets will be exported, optimized and minified automatically as long as you follow the project structure.
 
+### Running Project Locally
+1. Before you run the project you must make sure you are logged in to your NPM account.
+... To do so you must run the login command and enter the Username and Password you created for your NPM account. If you don't have one please contact a superior.
+
+```bash
+# Run NPM Login
+npm login
+
+# Enter Username
+# Enter Password
+# Enter Public Email
+```
+
+2. To run the project locally execute the setup script located at from the repository *root* directory:
+```
+./setup/dev-environment.sh
+```
+
+The script will install all the necessary dependencies to run the project and instantiate a local server with hot reloading.
+
+---
+
 #  Input Folder Structure
 ```bash
 ├── app
