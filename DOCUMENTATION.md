@@ -18,6 +18,7 @@ npm login
 # Enter Public Email
 ```
 
+
 2. To run the project locally execute the setup script located at from the repository *root* directory:
 ```
 ./setup/dev-environment.sh
@@ -25,6 +26,10 @@ npm login
 
 The script will install all the necessary dependencies to run the project and instantiate a local server with hot reloading.
 
+3. Setup the local Nginx server if you have never done it before.
+```bash
+./setup/nginx-local-install.sh
+```
 ---
 
 #  Input Folder Structure

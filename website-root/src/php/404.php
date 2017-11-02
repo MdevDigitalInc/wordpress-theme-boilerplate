@@ -1,4 +1,4 @@
-<?php get_header(); ?>
+<?php include 'header.php'; ?>
 
 	<main role="main">
 		<!-- section -->
@@ -19,6 +19,5 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+<?php include 'sidebar.php'; ?>
+<?php include 'footer.php'; ?>

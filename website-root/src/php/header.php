@@ -1,8 +1,8 @@
 <!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<html>
 	<head>
-		<meta charset="<?php bloginfo('charset'); ?>">
-		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
+		<meta charset="utf-8">
+		<title>TITLE TITLE TITLE</title>
 
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -23,7 +23,7 @@
 		<!-- [ RESPONSIVE VIEWPORT ] -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- [ Stylesheet ] -->
-    <link href="/css/styles.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
     <!-- [ ICONS ] -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -55,31 +55,7 @@
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="/icons/apple-touch-startup-image-768x1004.png">
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-touch-startup-image-1496x2048.png">
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-touch-startup-image-1536x2008.png">
-		<?php wp_head(); ?>
 
 	</head>
-	<body <?php body_class(); ?>>
+	<body>
 
-		<!-- wrapper -->
-		<div class="mdev-main-wrapper">
-
-			<!-- header -->
-			<header class="mdev-main-header" role="banner">
-
-					<!-- logo -->
-					<div class="mdev-main-brand">
-						<a href="<?php echo home_url(); ?>">
-							<!-- svg logo - toddmotto.com/mastering-svg-use-for-a-retina-web-fallbacks-with-png-script -->
-							<img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img">
-						</a>
-					</div>
-					<!-- /logo -->
-
-					<!-- nav -->
-					<nav class="mdev-main-nav" role="navigation">
-						<?php wp_nav_menu( array( 'theme_location' => 'main-nav' ) ); ?>
-					</nav>
-					<!-- /nav -->
-
-			</header>
-			<!-- /header -->
