@@ -1,4 +1,4 @@
-<?php /* Template Name: Full Width */
+<?php /* Template Name: Page w/ Sidebar */
 get_header(); ?>
 
 	<main role="main">
@@ -34,5 +34,7 @@ get_header(); ?>
 		</section>
 		<!-- /section -->
 	</main>
+
+<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -24,7 +24,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- [ Stylesheet ] -->
     <link href="/css/styles.css" rel="stylesheet">
-		<meta name="description" content="<?php bloginfo('description'); ?>">
     <!-- [ ICONS ] -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:600" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -57,14 +56,6 @@
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-touch-startup-image-1496x2048.png">
     <link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="/icons/apple-touch-startup-image-1536x2008.png">
 		<?php wp_head(); ?>
-		<script>
-        // conditionizr.com
-        // configure environment tests
-        conditionizr.config({
-            assets: '<?php echo get_template_directory_uri(); ?>',
-            tests: {}
-        });
-        </script>
 
 	</head>
 	<body <?php body_class(); ?>>
@@ -86,7 +77,7 @@
 
 					<!-- nav -->
 					<nav class="mdev-main-nav" role="navigation">
-						<?php html5blank_nav(); ?>
+						<?php wp_nav_menu( array( 'theme_location' => 'main-nav' ) ); ?>
 					</nav>
 					<!-- /nav -->
 
