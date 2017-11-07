@@ -58,3 +58,5 @@ typings/
 .env
 dist/
 mdev-theme/
+.DS_Store
+package-json.lock
