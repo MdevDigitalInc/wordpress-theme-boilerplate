@@ -86,8 +86,7 @@ module.exports = {
   // should have it's own app/[pagename].js
   // with it's own imports.
   entry: {
-    index: 'src/app/index.js',
-    page2: 'src/app/page2.js'
+    index: 'src/app/index.js'
   },
   resolve: {
     alias: {
@@ -279,8 +278,7 @@ module.exports = {
     // [ USAGE ]------------------
     // generateHtml('entry', 'template.html'),
     //
-    generateHtml('index','index.html'),
-    generateHtml('page2','page2.html'),
+    // generateHtml('index','index.html'),
     // [ FAVICON PROCESSING ] --------
     new FaviconsWebpackPlugin({
       logo: 'src/img/favicon.png',
