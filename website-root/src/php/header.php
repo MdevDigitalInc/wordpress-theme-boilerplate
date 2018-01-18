@@ -2,15 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>TITLE TITLE TITLE</title>
-
-
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>[ MOREIRA DEVELOPMENT PROJECT ] CLIENT | PROJECT </title>
+		<!-- [ SEO ] -->
+		<meta name="keywords" 							content="Vue, JavaScript, Node, JQuery, SCSS, HTML5, Aria, W3C" />
+		<meta name="description" 						content="Base Project Install" />
 		<!-- [ FACEBOOK OG ] -->
-		<meta property="og:url"             content="http://moreiradevelopment.io" />
-		<meta property="og:title"           content="[ MOREIRA DEVELOPMENT PROJECT ] CLIENT | PROJECT " />
-		<meta property="og:description"     content="Base Project Install" />
-		<meta property="og:image"           content="http://moreiradevelopment.io/social/moreira-development-og.jpg" />
+    <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta property="fb:app_id" content="APP_ID_HERE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url"  content="http://SITE_URL_HERE" />
+    <meta property="og:title" content="SITE_TITLE_HERE" />
+    <meta property="og:image" content="http://moreiradevelopment.io/social/moreira-development-twitcard.png" />
 		<!-- [ TWITTER CARDS ] -->
 		<meta name="twitter:card"           content="http://moreiradevelopment.io/social/moreira-development-twitcard.png" />
 		<meta name="twitter:site"           content="@SAMPLE">
