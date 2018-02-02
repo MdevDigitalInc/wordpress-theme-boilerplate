@@ -86,8 +86,7 @@ module.exports = {
   // should have it's own app/[pagename].js
   // with it's own imports.
   entry: {
-    index: 'src/app/index.js',
-    page2: 'src/app/page2.js'
+    index: 'src/app/index.js'
   },
   resolve: {
     alias: {
@@ -152,15 +151,15 @@ module.exports = {
           query: {
             mozjpeg: {
               progressive: true,
-              quality: 95
+              quality: ifProduction( 95, 5)
             },
             gifsicle: {
               interlaced: false,
               optimizationLevel: 2
             },
             pngquant: {
-              quality: '50-80',
-              speed: 3
+              quality: ifProduction('50-80', '5-10'),
+              speed: ifProduction(3, 9)
             },
             svgo: {
               plugins: [
@@ -279,9 +278,9 @@ module.exports = {
     // [ USAGE ]------------------
     // generateHtml('entry', 'template.html'),
     //
-    generateHtml('index','index.html'),
-    generateHtml('page2','page2.html'),
+    // generateHtml('index','index.html'),
     // [ FAVICON PROCESSING ] --------
+    ifProduction (
     new FaviconsWebpackPlugin({
       logo: 'src/img/favicon.png',
       prefix: 'icons/',
@@ -303,7 +302,8 @@ module.exports = {
         yandex: false,
         windows: false
       }
-    }),
+    })
+    ),
     // [ PHP OUTPUT ] ----------------
     // Webpack is using the Copy Webpack Plugin
     // to essentially copy raw PHP files from the
