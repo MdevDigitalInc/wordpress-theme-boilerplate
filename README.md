@@ -1,7 +1,9 @@
 ![Moreira Development](http://moreiradevelopment.io/social/googleLogo.png)
 
-# HTML5 Website Boilerplate
+# [DEPRECATED] HTML5 Website Boilerplate
 ## Webpack 2 Powered HTML5 Boilerplate witth SASS support, minification and Linting.
+Please do not use this package, it is now deprecated. Instead, look into our
+wordpack-docker-boilerplate for the latest WordPress starter pack.
 
 ### Running Project Locally
 1. Before you run the project you must make sure you are logged in to your NPM account.

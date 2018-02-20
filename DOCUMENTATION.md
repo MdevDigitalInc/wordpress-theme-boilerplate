@@ -1,6 +1,6 @@
 ![Moreira Development](http://moreiradevelopment.io/social/googleLogo.png)
 
-# HTML5 Website Boilerplate
+#  [DEPRECATED]HTML5 Website Boilerplate
 ## How to use the Mdev HTML5 Boilerplate
 The purpose of this Boilerplate is to deploy future ready static HTML5 websites with the power of modern web pipeline.
 Assets will be exported, optimized and minified automatically as long as you follow the project structure.
